@@ -6,7 +6,7 @@ A friendly, opinionated method for creating lo-fi, shareable, and reusable (and 
 
 Here's a simple example of a list of urls formatted in a friendly "nautalist" way:
 
-Nicely formatted in `YAML`...
+> Nicely formatted in `YAML`...
 
 ```yaml
 name: "Hello Lovely People!"
@@ -23,7 +23,7 @@ features:
   description: "p5js is a javascript library to make coding more accessible to everyone"
 ```
 
-...yields nicely formatted `JSON`:
+> ...yields nicely formatted `JSON`:
 
 ```json
 {
@@ -49,8 +49,17 @@ features:
 }
 ```
 
+> ... which can be used to generate very lovely webpages:
+
+![Example rendering of structure data as list of clickable links](assets/example-list.png)
 
 
+> ... and this makes sharing yours lists more accessible, beautiful, and functional, and delightful to experience for your friends, students, and loved ones. 
+
+
+
+## Goal
+> The ultimate goal is to make easy, pick-and-mix lists that can teach, inspire, catalog, and more -- basically anything and ordered list can do. Where does Nautilus come into view? This is a kind of a proof of concept for things I've been thinking about which revolves around how to make link collection, sharing, and remixing, easier to do. Ideally what we might accomplish is to create a methodology that requires little more than a clear set of instructions, the will to follow those instructions, and a place (e.g. a server or somewhere) that will serve up these lists of links in a nice way both as data and as a beautifully rendered view. 
 
 ## Structure
 
