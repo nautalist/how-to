@@ -1,8 +1,10 @@
-# How to be a Nautalist
+# How to be a Nautilist
 A friendly, opinionated method for creating lo-fi, shareable, and reusable (and remixable?) lists of links in yaml
 
-## What's a Nautalist?
-> A Nautalist (as opposed to the cephlapod nautilus) is a wanna-be/made-up standard protocol for sharing lists of URLs with people across the web. Whether you're an educator trying to share an open list of educational resources with students or a parent passing a list of urls for recipes to your favorite dishes to your kids, formatting your list as a 'nautalist' can make it easy for both humans and computers to use.
+![Friendly looking character holding a list and pencil](assets/howto.png)
+
+## What's a Nautilist?
+> A Nautilist (inspired by the cephlapod nautilus) is a wanna-be/made-up standard "protocol" for sharing lists of URLs with people across the web. Whether you're an educator trying to share an open list of educational resources with students or a parent passing a list of urls for recipes to your favorite dishes to your kids, formatting your list as a 'nautilist' can make it easy for both humans and computers to use.
 
 Here's a simple example of a list of urls formatted in a friendly "nautalist" way:
 
@@ -60,11 +62,25 @@ features:
 
 
 ## Goal
-> The ultimate goal is to make easy, pick-and-mix lists that can teach, inspire, catalog, and more -- basically anything and ordered list can do. Where does Nautilus come into view? This is a kind of a proof of concept for things I've been thinking about which revolves around how to make link collection, sharing, and remixing, easier to do. Ideally what we might accomplish is to create a methodology that requires little more than a clear set of instructions, the will to follow those instructions, and a place (e.g. a server or somewhere) that will serve up these lists of links in a nice way both as data and as a beautifully rendered view. 
+
+The ultimate goal is to make easy, pick-and-mix lists that can teach, inspire, catalog, and more -- basically anything and ordered list can do. Where does Nautilus come into view? This is a kind of a proof of concept for things I've been thinking about which revolves around how to make link collection, sharing, and remixing, easier to do. Ideally what we might accomplish is to create a methodology that requires little more than a clear set of instructions, the will to follow those instructions, and a place (e.g. a server or somewhere) that will serve up these lists of links in a nice way both as data and as a beautifully rendered view. 
+
+One nice outcome of writing lists this way is that regardless of where you decide to create a list of links to share, there will always be a way for that list to be usable in any context whether as a flat file open in a text editor living on the web. 
 
 
 ## Supported Types
 > Technically you can make lists and do whatever makes you happy, but if you structure our lists with one of the supported list structures below, you can take advantage of the [Nautilist App - coming soon!](#)
+
+
+To be a `nautilist` all you have to do is make sure that your list follows these 4 rules:
+
+1. you include a property called `type`
+2. you include a property called `name`
+3. you include a property called `description`
+4. you include your list items in property called `features`
+
+Have a look at the examples below for the `SingleList` and `MultiList` types and you'll see what I mean. 
+
 
 ### SingleList
 > A `type: "SingleList"` is, as the name suggests, a single list of urls with a name and description. You might think of a `SingleList` as a single concept with related links. The urls in the `features` list should be ordered as you'd like them to be read.
@@ -131,8 +147,11 @@ How this might be rendered could be something like this:
 
 ![Example multilist rendered](assets/example-multilist.png)
 
+
+## Publishing your Lists
+
 ## Learning YAML
 > All of this is based on YAML. Why YAML? Well, it's not perfect, but it is the closest thing to a file format with enough rules to allow you to do structured data things, but readable enough to not melt your brain while quickly making lists.
 
 - [Learn X in Y Minutes: YAML](https://learnxinyminutes.com/docs/yaml/)
-
+- [YAML Parser and generator](http://yaml-online-parser.appspot.com/) 
