@@ -11,7 +11,7 @@ Here's a simple example of a list of urls formatted in a friendly "nautalist" wa
 > Nicely formatted in `YAML`...
 
 ```yaml
-type: "SingleList"
+type: "list"
 name: "Hello Lovely People!"
 description: "Making shareable and usable lists of links make my heart warm"
 features:
@@ -82,11 +82,11 @@ To be a `nautilist` all you have to do is make sure that your list follows these
 Have a look at the examples below for the `SingleList` and `MultiList` types and you'll see what I mean. 
 
 
-### SingleList
-> A `type: "SingleList"` is, as the name suggests, a single list of urls with a name and description. You might think of a `SingleList` as a single concept with related links. The urls in the `features` list should be ordered as you'd like them to be read.
+### A Single List
+> A single list as the name suggests, a single list of urls with a name and description. You might think of a single list as a single concept with related links. The urls in the `features` list should be ordered in the order as you'd like them to be read.
 
 ```yaml
-type: "SingleList"
+type: "list"
 name: "Handy P5.js Tools"
 description: "This is a list of handy p5.js Tools ranging from commandline tools, project generators, and web editors."
 features:
@@ -105,15 +105,15 @@ features:
 ```
 
 
-### MultiList
-> A `type: "MultiList"` is, as the name suggests, a list of lists. You might think of a MultiList as a set of related lists meant to be read in order from top to bottom. Conceptually, a MultiList might be thought of as a project that curates a set of lists that speaks to a higher level theme, project, lesson, or whatever your heart desires. Just know that that a `MultiList` is designed for your list of lists.
+### A List of Lists
+> A list of lists is, as the name suggests, a list of lists. You might think of a list of lists as a set of related lists meant to be read in order from top to bottom. Conceptually, a list of lists might be thought of as a project that curates a set of lists that speaks to a higher level theme, project, lesson, or whatever your heart desires. Just know that that a list of lists contains other lists
 
 ```yaml
-type: "MultiList"
+type: "list"
 name: "The P5.js Landscape"
 description: "This is a list of the P5.js landscape."
 features:
-- type: "SingleList" 
+- type: "list" 
   name: "Handy P5.js Tools"
   description: "This is a list of handy p5.js Tools ranging from commandline tools, project generators, and web editors."
   features:
@@ -129,7 +129,7 @@ features:
     - url: "http://1023.io/p5-inspector/"
       name: "P5 playground"
       description: "A What you see is what you get editor for p5.js"
-- type: "SingleList"
+- type: "list"
   name: "P5 Libraries"
   description: "A list of libraries built for P5.js."
   features:
@@ -141,14 +141,15 @@ features:
       description: "Generative Design library bundled with lots of other tools built for p5.js"
 ```
 
-You can see that to create a `MultiList` you just need to include your `SingleList` as part of the `features` and add a dash (`-`) to the `type:"SingleList"` property. And voila! Just like that you've create a list of lists that's beautifully structured and ready to be used easily across the web!
+You can see that in order to create a list of lists you just need to include your single list as part of the `features` and add a dash (`-`) to the `type` property. And voila! Just like that you've create a list of lists that's beautifully structured and ready to be used easily across the web!
 
 How this might be rendered could be something like this:
 
 ![Example multilist rendered](assets/example-multilist.png)
 
 
-## Publishing your Lists
+## Why specify `type:list` all the time?
+> To be honest, we could probably leave it out, but I find it to be a handy for a number of reasons. 1. It is a helpful indicator for a beginning of a list, 2. It forces your brain into remembering what the structure of a nautilist list is. 
 
 ## Learning YAML
 > All of this is based on YAML. Why YAML? Well, it's not perfect, but it is the closest thing to a file format with enough rules to allow you to do structured data things, but readable enough to not melt your brain while quickly making lists.
